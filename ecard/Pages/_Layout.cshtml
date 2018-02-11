@@ -4,13 +4,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hello, world!</title>
+    <title>eGreeting Card - @ViewBag.meta_title</title>
+    <meta name="keywords" value="@ViewBag.meta_keywords" />
+    <meta name="description" value="This is a website about sends cards to friends.  @ViewBag.meta_desc" />
 
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     @RenderSection("css", required: false)
 </head>
-<body>
+<body class="@ViewBag.theme">
 
     @RenderBody()
 

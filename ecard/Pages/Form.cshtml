@@ -1,6 +1,16 @@
 ﻿@page
 @model FormModel
+@{
+    ViewBag.meta_title = "Form";
+    ViewBag.meta_keywords = "";
+    ViewBag.meta_desc = "";
+    ViewBag.theme = "birthday";
 
+    if (Now == 2 / 14 / 2018)
+    {
+        ViewBag.them = "valentine";
+    }
+}
 
 <div class="container">
 
@@ -41,6 +51,8 @@
 </div>
 
 @section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
     <!-- BEGIN: TEXTAREA AUTOSIZE -->
     <script src="~/lib/textarea-autosize/dist/jquery.textarea_autosize.js"></script>
