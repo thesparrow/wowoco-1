@@ -53,13 +53,13 @@ namespace ecard.Pages
                         _myDbBridge.SaveChanges();
 
                         //REDIRECT to the page with a new operator (name/value pair)
-                        return RedirectToPage("Preview", new { id = _myGreetings.ID });
+                        return RedirectToPage("Form", new { id = _myGreetings.ID });
                     }
 
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex);
-                        return RedirectToPage("Index");
+                        return RedirectToPage("Form");
                     }
                 }
             }
