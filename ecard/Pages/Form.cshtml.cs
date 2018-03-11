@@ -24,7 +24,6 @@ namespace ecard.Pages
         // WOWOCO: 3
         private IConfiguration _myConfiguration { get; set; }
 
-
         // WOWOCO: 4
         public FormModel(DbBridge DbBridge, IConfiguration Configuration)
         {
