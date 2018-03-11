@@ -1,7 +1,7 @@
 ﻿@page
-@model FormModel
+@model ecard.Model.Greetings
 @{
-    ViewBag.meta_title = "Form";
+    ViewBag.meta_title = "Forms";
     ViewBag.meta_keywords = "";
     ViewBag.meta_desc = "";
     ViewBag.theme = "birthday";
@@ -11,32 +11,38 @@
 
     <form action="Preview" method="post">
         <div class="form-group">
-            <label for="friendname" sr-only="Friend's Name">Friend's Name</label>
-            <input name="friendname" type="text" class="form-control" required />
+            <label asp-for="@Model.friendname    @Model.friendname"></label>
+            <input asp-for="@Model.friendname" type="text" class="form-control" />
+            <span asp-validation-for="@Model.friendname" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label for="friendemail" sr-only="Friend's Email">Friend's Email</label>
-            <input name="friendemail" type="email" class="form-control" required />
+            <label asp-for="@Model.friendemail"></label>
+            <input asp-for="@Model.friendemail" type="email" class="form-control" />
+            <span asp-validation-for="@Model.friendemail" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label for="subject" sr-only="Subject">Subject</label>
-            <input name="subject" type="text" class="form-control" required />
+            <label asp-for="@Model.subject"></label>
+            <input asp-for="@Model.subject" type="text" class="form-control" />
+            <span asp-validation-for="@Model.subject" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label for="message" sr-only="Message">Message</label>
-            <textarea name="message" class="form-control" required maxlength="140"></textarea>
+            <label asp-for="@Model.message"></label>
+            <textarea asp-for="@Model.message" class="form-control" maxlength="100"></textarea>
             <div class="countdown"></div>
+            <span asp-validation-for="@Model.message" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label for="sendername" sr-only="Your Name">Your Name</label>
-            <input name="sendername" type="text" class="form-control" required />
+            <label asp-for="@Model.sendername"></label>
+            <input asp-for="@Model.sendername" type="text" class="form-control" />
+            <span asp-validation-for="@Model.sendername" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label for="senderemail" sr-only="Your Email">Your Email</label>
-            <input name="senderemail" type="email" class="form-control" required />
+            <label asp-for="@Model.senderemail"></label>
+            <input asp-for="@Model.senderemail" type="email" class="form-control" />
+            <span asp-validation-for="@Model.senderemail" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <div class="g-recaptcha" data-sitekey="6Le-Jy0UAAAAAMyxngpkD12DzzXto51KmZNciDG2"></div>
+            <div class="g-recaptcha" data-sitekey="6LeM_i0UAAAAACyV8wOooe4mV3_XHbcl-hMjtnrM"></div>
         </div>
         <div class="form-group">
             <input type="submit" value="Submit" class="btn btn-primary" />
@@ -60,3 +66,4 @@
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
 }
+
