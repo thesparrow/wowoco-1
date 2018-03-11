@@ -33,6 +33,7 @@ namespace ecard.Pages
 
         }
 
+        public void OnGet() { }
 
         [HttpPost]
         public async Task<IActionResult> OnPost()
@@ -44,13 +45,8 @@ namespace ecard.Pages
                 {
                     try
                     {
-                        // DB Related Customized values added with each record
-                        //_myGreetings.CreateDate = DateTime.Now.ToString();
-                        //_myGreetings.CreateIP = this.HttpContext.Connection.RemoteIpAddress.ToString();
-
-                        //Clean Data before insertion 
                         _myGreetings.senderemail = _myGreetings.senderemail.ToLowerInvariant();
-                        _myGreetings.friendemail = _myGreetings.friendemail.ToLowerInvariant();
+                        _myGreetings.friendemail = _myGreetings.friendemail.ToUpperInvariant();
 
                         // DB Related add record
                         _myDbBridge.Greetings.Add(_myGreetings);
