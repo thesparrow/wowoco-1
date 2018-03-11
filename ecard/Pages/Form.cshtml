@@ -1,5 +1,5 @@
 ﻿@page
-@model ecard.Model.Greetings
+@model FormModel
 @{
     ViewBag.meta_title = "Forms";
     ViewBag.meta_keywords = "";
@@ -9,37 +9,37 @@
 
 <div class="container">
 
-    <form action="Preview" method="post">
+    <form method="post">
         <div class="form-group">
-            <label asp-for="@Model.friendname"></label>
-            <input asp-for="@Model.friendname" type="text" class="form-control" />
-            <span asp-validation-for="@Model.friendname" class="text-danger"></span>
+            <label asp-for="@Model._myGreetings.friendname"></label>
+            <input asp-for="@Model._myGreetings.friendname" type="text" class="form-control" />
+            <span asp-validation-for="@Model._myGreetings.friendname" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="@Model.friendemail"></label>
-            <input asp-for="@Model.friendemail" type="email" class="form-control" />
-            <span asp-validation-for="@Model.friendemail" class="text-danger"></span>
+            <label asp-for="@Model._myGreetings.friendemail"></label>
+            <input asp-for="@Model._myGreetings.friendemail" type="email" class="form-control" />
+            <span asp-validation-for="@Model._myGreetings.friendemail" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="@Model.subject"></label>
-            <input asp-for="@Model.subject" type="text" class="form-control" />
-            <span asp-validation-for="@Model.subject" class="text-danger"></span>
+            <label asp-for="@Model._myGreetings.subject"></label>
+            <input asp-for="@Model._myGreetings.subject" type="text" class="form-control" />
+            <span asp-validation-for="@Model._myGreetings.subject" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="@Model.message"></label>
-            <textarea asp-for="@Model.message" class="form-control" maxlength="100"></textarea>
+            <label asp-for="@Model._myGreetings.message"></label>
+            <textarea asp-for="@Model._myGreetings.message" class="form-control" maxlength="100"></textarea>
             <div class="countdown"></div>
-            <span asp-validation-for="@Model.message" class="text-danger"></span>
+            <span asp-validation-for="@Model._myGreetings.message" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="@Model.sendername"></label>
-            <input asp-for="@Model.sendername" type="text" class="form-control" />
-            <span asp-validation-for="@Model.sendername" class="text-danger"></span>
+            <label asp-for="@Model._myGreetings.sendername"></label>
+            <input asp-for="@Model._myGreetings.sendername" type="text" class="form-control" />
+            <span asp-validation-for="@Model._myGreetings.sendername" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="@Model.senderemail"></label>
-            <input asp-for="@Model.senderemail" type="email" class="form-control" />
-            <span asp-validation-for="@Model.senderemail" class="text-danger"></span>
+            <label asp-for="@Model._myGreetings.senderemail"></label>
+            <input asp-for="@Model._myGreetings.senderemail" type="email" class="form-control" />
+            <span asp-validation-for="@Model._myGreetings.senderemail" class="text-danger"></span>
         </div>
         <div class="form-group">
             <div class="g-recaptcha" data-sitekey="6Le-Jy0UAAAAAMyxngpkD12DzzXto51KmZNciDG2"></div>
