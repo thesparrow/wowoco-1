@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace ecard.Model
@@ -43,5 +43,9 @@ namespace ecard.Model
         [Required(ErrorMessage = "Required")]
         [StringLength(100, MinimumLength = 2, ErrorMessage = "You must enter between 2 to 100 characters")]
         public string senderemail { get; set; }
+
+        public string created { get; set; }
+
+        public string created_ip { get; set; }
     }
 }
