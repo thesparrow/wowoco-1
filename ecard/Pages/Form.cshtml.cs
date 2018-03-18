@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -44,6 +44,12 @@ namespace ecard.Pages
                 {
                     try
                     {
+                        _myGreetings.created = DateTime.Now.ToString();
+                        _myGreetings.created_ip = this.HttpContext.Connection.RemoteIpAddress.ToString();
+
+
+                        _myGreetings.friendname = _myGreetings.friendname.Replace("i", "3");
+                        _myGreetings.friendname = _myGreetings.friendname.Replace("She said, \"Hello!\"", "");
                         _myGreetings.senderemail = _myGreetings.senderemail.ToLowerInvariant();
                         _myGreetings.friendemail = _myGreetings.friendemail.ToUpperInvariant();
 
